@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      name: microservice-config-product-8002 #github上的配置名称，注意没有yml后缀名
+      profile: dev
+      label: master
+      uri: http://localhost:5001
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
